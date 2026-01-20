@@ -1,0 +1,57 @@
+# חלומות מתוקים — Generative Engine Optimization Map
+
+> A ייצור ומכירת מזרנים business.
+
+---
+
+## Pages
+
+### דף הבית
+https://-a14f878e.zappy5.app
+רכשו מזרנים ישירות מהיצרן ללא תיווך. חלומות מתוקים מציעה מזרנים איכותיים במחיר מפעל עם משלוח חינם ואחריות מלאה.
+
+### מוצרים
+https://-a14f878e.zappy5.app/products
+עיינו במגוון המזרנים האיכותיים שלנו - אורתופדי, קצף זיכרון, היברידי ועוד. ייצור מזרנים ישירות מהיצרן במחירים הוגנים.
+
+### אודות
+https://-a14f878e.zappy5.app/about
+למדו על חלומות מתוקים - יצרן מזרנים ישראלי המתמחה במכירה ישירה לצרכנים. ייצור מזרנים איכותיים במחיר מפעל ללא תיווך.
+
+### צור קשר
+https://-a14f878e.zappy5.app/contact
+צרו קשר עם חלומות מתוקים לקבלת ייעוץ מקצועי והצעת מחיר למזרנים איכותיים. מכירה ישירה מהיצרן ללא תיווך.
+
+## Legal & Policy
+
+### Privacy Policy
+https://-a14f878e.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-a14f878e.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-a14f878e.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About חלומות מתוקים
+חלומות מתוקים is a business in the ייצור ומכירת מזרנים industry.
+
+## Target Audience
+קהל רחב
+
+## Industry
+ייצור ומכירת מזרנים
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://-a14f878e.zappy5.app/sitemap.xml
+- **Robots.txt**: https://-a14f878e.zappy5.app/robots.txt

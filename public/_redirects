@@ -1,5 +1,5 @@
 # Clean URL redirects for Render static hosting
-# Generated: 2026-01-21T08:25:11.765Z
+# Generated: 2026-01-21T09:01:13.800Z
 # NOTE: Render uses render.yaml for routing, not _redirects (that is Netlify)
 # This file is kept for reference only
 
@@ -25,6 +25,3 @@
 
 # Dynamic routes - serve dedicated HTML templates for dynamic paths
 /product/*  /product.html  200!
-
-# SPA fallback - serve index.html for all unmatched routes
-/*  /index.html  200

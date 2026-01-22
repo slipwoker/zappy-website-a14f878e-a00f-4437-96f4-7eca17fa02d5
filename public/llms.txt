@@ -1,71 +1,81 @@
-# Business — Generative Engine Optimization Map
+# חלומות מתוקים — Generative Engine Optimization Map
+
+> A ייצור ומכירת מזרנים business.
 
 ---
 
 ## Pages
 
 ### דף הבית
-https://example.com
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com
 רכשו מזרנים ישירות מהיצרן ללא תיווך. חלומות מתוקים מציעה מזרנים איכותיים במחיר מפעל עם משלוח חינם ואחריות מלאה.
 
 ### Products
-https://example.com/products
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/products
 המוצרים שלנו - חלומות מתוקים
 
 ### אודות
-https://example.com/about
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/about
 למדו על חלומות מתוקים - יצרן מזרנים ישראלי המתמחה במכירה ישירה לצרכנים. ייצור מזרנים איכותיים במחיר מפעל ללא תיווך.
 
 ### צור קשר
-https://example.com/contact
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/contact
 צרו קשר עם חלומות מתוקים לקבלת ייעוץ מקצועי והצעת מחיר למזרנים איכותיים. מכירה ישירה מהיצרן ללא תיווך.
 
 ### Cart
-https://example.com/cart
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/cart
 עגלת הקניות שלך
 
 ### Checkout
-https://example.com/checkout
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/checkout
 תשלום
 
 ### Login
-https://example.com/login
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/login
 התחברות לקוחות
 
 ### Account
-https://example.com/account
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/account
 החשבון שלי
 
 ### Order Success
-https://example.com/order-success
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/order-success
 תודה על ההזמנה
 
 ### Product Detail
-https://example.com/product/:slug
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/product/:slug
 פרטי המוצר - חלומות מתוקים
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About חלומות מתוקים
+חלומות מתוקים is a business in the ייצור ומכירת מזרנים industry.
+
+## Target Audience
+קהל רחב
+
+## Industry
+ייצור ומכירת מזרנים
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+- **Sitemap**: https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/sitemap.xml
+- **Robots.txt**: https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/robots.txt

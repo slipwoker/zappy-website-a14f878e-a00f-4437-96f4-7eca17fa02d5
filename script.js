@@ -467,9 +467,9 @@ window.onload = function() {
       
       document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
       document.documentElement.style.setProperty('--total-header-height', totalHeight + 'px');
-      document.body.style.paddingTop = totalHeight + 'px';
+      document.body.style.setProperty('padding-top', totalHeight + 'px', 'important');
     } else if (announcementBarHeight > 0) {
-      document.body.style.paddingTop = announcementBarHeight + 'px';
+      document.body.style.setProperty('padding-top', announcementBarHeight + 'px', 'important');
     }
   }
   

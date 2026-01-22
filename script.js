@@ -695,14 +695,44 @@ window.onload = function() {
     }
   }
   
-  // Helper: Make image URL absolute (works from any URL depth)
-  function makeAbsoluteUrl(url) {
+  // Helper: resolve product image URL for preview + live
+  function getPreviewAssetBase() {
+    var websiteId = window.ZAPPY_WEBSITE_ID || (window.ZAPPY_CONFIG && window.ZAPPY_CONFIG.websiteId);
+    var path = window.location && window.location.pathname ? window.location.pathname : '';
+    if (!websiteId || !path) return '';
+    if (path.indexOf('/api/website/preview-fullscreen/') !== -1) return '/api/website/preview-fullscreen/' + websiteId + '/assets/';
+    if (path.indexOf('/api/website/preview/') !== -1) return '/api/website/preview/' + websiteId + '/assets/';
+    if (path.indexOf('/preview-fullscreen/') !== -1) return '/api/website/preview-fullscreen/' + websiteId + '/assets/';
+    if (path.indexOf('/preview/') !== -1) return '/api/website/preview/' + websiteId + '/assets/';
+    return '';
+  }
+
+  function resolveProductImageUrl(url) {
     if (!url) return '';
-    if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('/') || url.startsWith('data:')) {
+    if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:')) {
+      return url;
+    }
+    if (url.startsWith('/api/website/preview')) {
+      return url;
+    }
+    if (url.startsWith('/preview-fullscreen/')) {
+      return '/api/website' + url;
+    }
+    if (url.startsWith('/preview/')) {
+      return '/api/website' + url;
+    }
+    var previewBase = getPreviewAssetBase();
+    var normalized = url.replace(/^\/?assets\//, '');
+    if (previewBase) {
+      return previewBase + normalized;
+    }
+    if (url.startsWith('/')) {
       return url;
     }
     return '/' + url;
   }
+  // Expose helper for functions outside this IIFE
+  window.resolveProductImageUrl = resolveProductImageUrl;
   
   // Render products to grid
   function renderProductsToGrid(grid, products) {
@@ -712,8 +742,8 @@ window.onload = function() {
         ? t.currency + parseFloat(p.sale_price).toFixed(2) + '<span class="original-price">' + t.currency + parseFloat(p.price).toFixed(2) + '</span>'
         : t.currency + parseFloat(p.price).toFixed(2);
       
-      // Get first image with absolute URL
-      var imageUrl = p.images && p.images[0] ? makeAbsoluteUrl(p.images[0]) : '';
+      // Get first image with correct URL in preview/live
+      var imageUrl = p.images && p.images[0] ? resolveProductImageUrl(p.images[0]) : '';
       
       // Build tag badges (manual only - all tags come from product.tags array)
       var tagBadges = [];
@@ -2589,6 +2619,11 @@ function renderProductGrid(grid, products, t) {
       ? t.currency + parseFloat(p.sale_price).toFixed(2) + '<span class="original-price">' + t.currency + parseFloat(p.price).toFixed(2) + '</span>'
       : t.currency + parseFloat(p.price).toFixed(2);
     
+    // Get first image with correct URL in preview/live
+    var imageUrl = p.images && p.images[0]
+      ? (window.resolveProductImageUrl ? window.resolveProductImageUrl(p.images[0]) : p.images[0])
+      : '';
+    
     // Build tag badges (manual only - all tags come from product.tags array)
     var tagBadges = [];
     if (p.tags && p.tags.length) {
@@ -2611,7 +2646,7 @@ function renderProductGrid(grid, products, t) {
     return '<div class="product-card" data-product-id="' + p.id + '">' +
       tagsHtml +
       '<a href="/product/' + (p.slug || p.id) + '" class="product-card-link">' +
-        (p.images?.[0] ? '<img src="' + p.images[0] + '" alt="' + p.name + '">' : '<div style="height:200px;background:#f0f0f0;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#999;">📦</div>') +
+        (imageUrl ? '<img src="' + imageUrl + '" alt="' + p.name + '">' : '<div style="height:200px;background:#f0f0f0;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#999;">📦</div>') +
         '<h3>' + p.name + '</h3>' +
         '<p>' + (p.description || '').substring(0, 80) + (p.description?.length > 80 ? '...' : '') + '</p>' +
         '<div class="price">' + displayPrice + '</div>' +
@@ -2728,15 +2763,13 @@ function showProductNotFound(container, t) {
 }
 
 function renderProductDetail(container, product, t) {
-  // Ensure image paths are absolute (start with /) to work from any URL depth
+  // Ensure image paths work in preview + live
   const images = (product.images || []).map(function(img) {
-    if (!img) return '';
-    if (img.startsWith('http://') || img.startsWith('https://') || img.startsWith('/') || img.startsWith('data:')) {
-      return img;
+    if (window.resolveProductImageUrl) {
+      return window.resolveProductImageUrl(img);
     }
-    // Make relative paths absolute
-    return '/' + img;
-  });
+    return img;
+  }).filter(Boolean);
   const mainImage = images[0] || '';
   const hasMultipleImages = images.length > 1;
   const baseInStock = product.stock_status !== 'out_of_stock';

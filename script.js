@@ -413,9 +413,50 @@ window.onload = function() {
 })();
 
 ;
+/* ==ZAPPY E-COMMERCE JS START== */
 // E-commerce functionality
 (function() {
   const websiteId = window.ZAPPY_WEBSITE_ID;
+  
+  // Set up fixed header heights - NO GAP between header and catalog menu
+  function setupFixedHeaders() {
+    const header = document.querySelector('header');
+    const catalogMenu = document.querySelector('.zappy-catalog-menu');
+    
+    if (header) {
+      // Force remove any spacing from header
+      header.style.marginBottom = '0';
+      header.style.paddingBottom = '0';
+      header.style.borderBottom = 'none';
+      
+      const headerHeight = header.offsetHeight;
+      let totalHeight = headerHeight;
+      
+      if (catalogMenu) {
+        // Force remove any spacing from catalog menu
+        catalogMenu.style.marginTop = '0';
+        catalogMenu.style.paddingTop = '0';
+        catalogMenu.style.borderTop = 'none';
+        // Position exactly at header bottom - no gap
+        catalogMenu.style.top = headerHeight + 'px';
+        totalHeight = headerHeight + catalogMenu.offsetHeight;
+      }
+      
+      document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+      document.documentElement.style.setProperty('--total-header-height', totalHeight + 'px');
+      document.body.style.paddingTop = totalHeight + 'px';
+    }
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupFixedHeaders);
+  } else {
+    setupFixedHeaders();
+  }
+  window.addEventListener('resize', setupFixedHeaders);
+  setTimeout(setupFixedHeaders, 50);
+  setTimeout(setupFixedHeaders, 200);
+  setTimeout(setupFixedHeaders, 500);
   const getApiBase = function() {
     const explicitBase = (window.ZAPPY_API_BASE || '').replace(/\/$/, '');
     const path = window.location ? window.location.pathname : '';
@@ -436,8 +477,9 @@ window.onload = function() {
   // Translations
   const t = {"products":"מוצרים","ourProducts":"המוצרים שלנו","featuredProducts":"מוצרים מומלצים","noFeaturedProducts":"עוד לא נבחרו מוצרים מומלצים. צפו בכל המוצרים שלנו!","featuredCategories":"קנו לפי קטגוריה","all":"הכל","featured":"מומלצים","new":"חדשים","sale":"מבצעים","loadingProducts":"טוען מוצרים...","cart":"עגלת קניות","yourCart":"עגלת הקניות שלך","emptyCart":"העגלה ריקה","total":"סה\"כ","proceedToCheckout":"המשך לתשלום","checkout":"תשלום","customerInfo":"פרטי לקוח","fullName":"שם מלא","email":"אימייל","phone":"טלפון","shippingAddress":"כתובת למשלוח","street":"רחוב ומספר","apartment":"דירה, קומה, כניסה","city":"עיר","zip":"מיקוד","shippingMethod":"שיטת משלוח","loadingShipping":"טוען שיטות משלוח...","payment":"תשלום","loadingPayment":"טוען אפשרויות תשלום...","orderSummary":"סיכום הזמנה","subtotal":"סכום ביניים","vat":"מע\"מ","vatIncluded":"כולל מע\"מ","shipping":"משלוח","discount":"הנחה","totalToPay":"סה\"כ לתשלום","placeOrder":"בצע הזמנה","login":"התחברות","customerLogin":"התחברות לקוחות","enterEmail":"הזן את כתובת האימייל שלך ונשלח לך קוד התחברות","emailAddress":"כתובת אימייל","sendCode":"שלח קוד","enterCode":"הזן את הקוד שנשלח לאימייל שלך","verificationCode":"קוד אימות","verify":"אמת","returnPolicy":"מדיניות החזרות","addToCart":"הוסף לעגלה","addedToCart":"המוצר נוסף לעגלה!","remove":"הסר","noProducts":"אין מוצרים להצגה כרגע","errorLoading":"שגיאה בטעינה","days":"ימים","currency":"₪","free":"חינם","freeAbove":"משלוח חינם מעל","noShippingMethods":"אין אפשרויות משלוח זמינות","viewAllResults":"הצג את כל התוצאות","searchProducts":"חיפוש מוצרים","productDetails":"פרטי המוצר","viewDetails":"לפרטים נוספים","inStock":"במלאי","outOfStock":"אזל מהמלאי","sku":"מק\"ט","category":"קטגוריה","relatedProducts":"מוצרים דומים","productNotFound":"המוצר לא נמצא","backToProducts":"חזרה למוצרים","quantity":"כמות","couponCode":"קוד קופון","enterCouponCode":"הזן קוד קופון","applyCoupon":"החל","removeCoupon":"הסר","couponApplied":"הקופון הוחל בהצלחה!","invalidCoupon":"קוד קופון לא תקין","couponExpired":"הקופון פג תוקף","couponMinOrder":"סכום הזמנה מינימלי","alreadyHaveAccount":"כבר יש לך חשבון?","loginHere":"התחבר כאן","loggedInAs":"מחובר כ:","logout":"התנתק","haveCouponCode":"יש לי קוד קופון","orderSuccess":"ההזמנה התקבלה!","thankYouOrder":"תודה על ההזמנה","orderNumber":"מספר הזמנה","orderConfirmation":"אישור הזמנה נשלח לאימייל שלך","orderProcessing":"ההזמנה שלך בטיפול. נעדכן אותך כשהמשלוח יצא לדרך.","continueShopping":"להמשך קניות","orderDetails":"פרטי ההזמנה","loadingOrder":"טוען פרטי הזמנה...","orderNotFound":"לא נמצאה הזמנה","orderItems":"פריטים בהזמנה","paidAmount":"סכום ששולם","myAccount":"החשבון שלי","accountWelcome":"ברוך הבא","yourOrders":"ההזמנות שלך","noOrders":"אין עדיין הזמנות","orderDate":"תאריך","orderStatus":"סטטוס","orderTotal":"סה\"כ","viewOrder":"צפה בהזמנה","statusPending":"ממתין לתשלום","statusPaid":"שולם","statusProcessing":"בטיפול","statusShipped":"נשלח","statusDelivered":"נמסר","statusCancelled":"בוטל","notLoggedIn":"לא מחובר","pleaseLogin":"יש להתחבר כדי לצפות בחשבון","selectVariant":"בחר אפשרות","variantUnavailable":"לא זמין","color":"צבע","size":"מידה","material":"חומר","style":"סגנון","weight":"משקל","capacity":"קיבולת","length":"אורך"};
   
-  // RTL detection (based on currency or document direction)
-  const isRTL = t.currency === '₪' || document.documentElement.dir === 'rtl' || document.body.dir === 'rtl';
+  // RTL detection (based on HTML lang attribute or document direction)
+  const htmlLang = document.documentElement.lang || '';
+  const isRTL = ['he', 'ar', 'iw'].includes(htmlLang.toLowerCase().substring(0, 2)) || document.documentElement.dir === 'rtl' || document.body.dir === 'rtl';
   
   // Cart state
   let cart = JSON.parse(localStorage.getItem('zappy_cart_' + websiteId) || '[]');
@@ -608,15 +650,11 @@ window.onload = function() {
           return p.sale_price && parseFloat(p.sale_price) < parseFloat(p.price); 
         });
       } else if (currentFilter === 'new') {
-        // Show products created in last 30 days or with "new" tag
-        var thirtyDaysAgo = new Date();
-        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+        // Show products with "new" tag (manual only)
         productsToShow = productsCache.filter(function(p) { 
-          var isNew = p.tags && p.tags.some(function(tag) { 
+          return p.tags && p.tags.some(function(tag) { 
             return tag.toLowerCase() === 'new' || tag.toLowerCase() === 'חדש'; 
           });
-          var createdRecently = p.created_at && new Date(p.created_at) > thirtyDaysAgo;
-          return isNew || createdRecently;
         });
       }
       
@@ -652,30 +690,19 @@ window.onload = function() {
       // Get first image with absolute URL
       var imageUrl = p.images && p.images[0] ? makeAbsoluteUrl(p.images[0]) : '';
       
-      // Build tag badges
+      // Build tag badges (manual only - all tags come from product.tags array)
       var tagBadges = [];
-      // Add sale badge if on sale
-      if (hasSalePrice) {
-        tagBadges.push('<span class="product-tag tag-sale">' + t.sale + '</span>');
-      }
-      // Add new badge if product is new (created in last 30 days or has new tag)
-      var thirtyDaysAgo = new Date();
-      thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-      var isNew = (p.tags && p.tags.some(function(tag) { 
-        return tag.toLowerCase() === 'new' || tag.toLowerCase() === 'חדש'; 
-      })) || (p.created_at && new Date(p.created_at) > thirtyDaysAgo);
-      if (isNew) {
-        tagBadges.push('<span class="product-tag tag-new">' + t.new + '</span>');
-      }
-      // Add featured badge
-      if (p.is_featured) {
-        tagBadges.push('<span class="product-tag tag-featured">' + t.featured + '</span>');
-      }
-      // Add custom tags (excluding new/חדש which we already handle)
       if (p.tags && p.tags.length) {
         p.tags.forEach(function(tag) {
           var tagLower = tag.toLowerCase();
-          if (tagLower !== 'new' && tagLower !== 'חדש') {
+          // Apply special styling for known tag types
+          if (tagLower === 'sale' || tagLower === 'מבצע') {
+            tagBadges.push('<span class="product-tag tag-sale">' + tag + '</span>');
+          } else if (tagLower === 'new' || tagLower === 'חדש') {
+            tagBadges.push('<span class="product-tag tag-new">' + tag + '</span>');
+          } else if (tagLower === 'featured' || tagLower === 'מומלץ') {
+            tagBadges.push('<span class="product-tag tag-featured">' + tag + '</span>');
+          } else {
             tagBadges.push('<span class="product-tag">' + tag + '</span>');
           }
         });
@@ -2537,30 +2564,19 @@ function renderProductGrid(grid, products, t) {
       ? t.currency + parseFloat(p.sale_price).toFixed(2) + '<span class="original-price">' + t.currency + parseFloat(p.price).toFixed(2) + '</span>'
       : t.currency + parseFloat(p.price).toFixed(2);
     
-    // Build tag badges
+    // Build tag badges (manual only - all tags come from product.tags array)
     var tagBadges = [];
-    // Add sale badge if on sale
-    if (hasSalePrice) {
-      tagBadges.push('<span class="product-tag tag-sale">' + t.sale + '</span>');
-    }
-    // Add new badge if product is new (created in last 30 days or has new tag)
-    var thirtyDaysAgo = new Date();
-    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-    var isNew = (p.tags && p.tags.some(function(tag) { 
-      return tag.toLowerCase() === 'new' || tag.toLowerCase() === 'חדש'; 
-    })) || (p.created_at && new Date(p.created_at) > thirtyDaysAgo);
-    if (isNew) {
-      tagBadges.push('<span class="product-tag tag-new">' + t.new + '</span>');
-    }
-    // Add featured badge
-    if (p.is_featured) {
-      tagBadges.push('<span class="product-tag tag-featured">' + t.featured + '</span>');
-    }
-    // Add custom tags (excluding new/חדש which we already handle)
     if (p.tags && p.tags.length) {
       p.tags.forEach(function(tag) {
         var tagLower = tag.toLowerCase();
-        if (tagLower !== 'new' && tagLower !== 'חדש') {
+        // Apply special styling for known tag types
+        if (tagLower === 'sale' || tagLower === 'מבצע') {
+          tagBadges.push('<span class="product-tag tag-sale">' + tag + '</span>');
+        } else if (tagLower === 'new' || tagLower === 'חדש') {
+          tagBadges.push('<span class="product-tag tag-new">' + tag + '</span>');
+        } else if (tagLower === 'featured' || tagLower === 'מומלץ') {
+          tagBadges.push('<span class="product-tag tag-featured">' + tag + '</span>');
+        } else {
           tagBadges.push('<span class="product-tag">' + tag + '</span>');
         }
       });
@@ -2973,14 +2989,16 @@ function updateVariantUI(variant, product, t, selectedAttributes) {
   const hasSalePrice = window.productHasSalePrice;
   
   if (variant) {
-    // Update price with variant price modifier
-    const priceModifier = parseFloat(variant.price_modifier || 0);
-    const finalPrice = basePrice + priceModifier;
-    const finalOriginalPrice = hasSalePrice ? originalPrice + priceModifier : null;
+    // Use variant's own price if set, otherwise fall back to base price
+    const variantPrice = variant.price ? parseFloat(variant.price) : null;
+    const finalPrice = variantPrice !== null ? variantPrice : basePrice;
     
     if (priceDisplay) {
-      if (hasSalePrice && finalOriginalPrice) {
-        priceDisplay.innerHTML = t.currency + finalPrice.toFixed(2) + '<span class="original-price">' + t.currency + finalOriginalPrice.toFixed(2) + '</span>';
+      // If variant has its own price, don't show original/sale price comparison
+      if (variantPrice !== null) {
+        priceDisplay.textContent = t.currency + finalPrice.toFixed(2);
+      } else if (hasSalePrice) {
+        priceDisplay.innerHTML = t.currency + finalPrice.toFixed(2) + '<span class="original-price">' + t.currency + originalPrice.toFixed(2) + '</span>';
       } else {
         priceDisplay.textContent = t.currency + finalPrice.toFixed(2);
       }
@@ -3052,10 +3070,10 @@ function addProductToCart() {
   };
   
   if (selectedVariant) {
-    // Calculate final price with variant modifier
+    // Use variant's own price if set, otherwise use base price
     const basePrice = window.productBasePrice;
-    const priceModifier = parseFloat(selectedVariant.price_modifier || 0);
-    const finalPrice = basePrice + priceModifier;
+    const variantPrice = selectedVariant.price ? parseFloat(selectedVariant.price) : null;
+    const finalPrice = variantPrice !== null ? variantPrice : basePrice;
     
     // Add variant info to cart item
     cartItem.selectedVariant = {
@@ -3063,16 +3081,13 @@ function addProductToCart() {
       name: selectedVariant.name,
       sku: selectedVariant.sku,
       attributes: selectedVariant.attributes,
-      priceModifier: priceModifier
+      price: variantPrice
     };
     cartItem.variantName = selectedVariant.name;
     cartItem.displayPrice = finalPrice;
     // Override price for cart calculations
-    if (window.productHasSalePrice) {
-      cartItem.sale_price = finalPrice.toString();
-    } else {
-      cartItem.price = finalPrice.toString();
-    }
+    cartItem.price = finalPrice.toString();
+    cartItem.sale_price = null; // Clear sale price when variant has its own price
     // Use variant SKU if available
     if (selectedVariant.sku) {
       cartItem.variantSku = selectedVariant.sku;
@@ -3113,3 +3128,4 @@ async function loadRelatedProducts(currentProduct, t) {
     console.error('Failed to load related products', e);
   }
 }
+/* ==ZAPPY E-COMMERCE JS END== */

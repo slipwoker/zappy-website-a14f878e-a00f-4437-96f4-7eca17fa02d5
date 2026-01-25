@@ -74,6 +74,41 @@
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* Announcement Bar Styles */
+.zappy-announcement-bar {
+  background-color: #000000;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  box-sizing: border-box;
+  z-index: 1001;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.zappy-announcement-bar .zappy-announcement-message {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.zappy-announcement-bar .zappy-announcement-message.active {
+  opacity: 1;
+}</style>
 <!-- Zappy Analytics -->
 <script>
 (function() {
@@ -321,6 +356,7 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+<div class="zappy-announcement-bar"><span class="zappy-announcement-message active">הנחה 20% לתחילת השנה - קוד קופון NEW2026</span><span class="zappy-announcement-message">משלוח חינם מעל 300 ש״ח הזמנה</span></div>
   <script>window.ZAPPY_WEBSITE_ID = "a14f878e-a00f-4437-96f4-7eca17fa02d5";window.ZAPPY_API_BASE = "http://localhost:5001";</script>
   
     <div class="mobile-search-panel" id="mobile-search-panel">
@@ -458,6 +494,19 @@
     <a href="/checkout" class="cart-drawer-checkout">המשך לתשלום</a>
   </div>
 </aside>
+
+<script>
+(function() {
+  var messages = document.querySelectorAll('.zappy-announcement-message');
+  if (messages.length <= 1) return;
+  var current = 0;
+  setInterval(function() {
+    messages[current].classList.remove('active');
+    current = (current + 1) % messages.length;
+    messages[current].classList.add('active');
+  }, 3000);
+})();
+</script>
 
     <script id="zappy-mobile-submenu-script">
     (function() {

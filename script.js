@@ -500,7 +500,7 @@ window.onload = function() {
   if (!websiteId) return;
   
   // Translations
-  const t = {"products":"מוצרים","ourProducts":"המוצרים שלנו","featuredProducts":"מוצרים מומלצים","noFeaturedProducts":"עוד לא נבחרו מוצרים מומלצים. צפו בכל המוצרים שלנו!","featuredCategories":"קנו לפי קטגוריה","all":"הכל","featured":"מומלצים","new":"חדשים","sale":"מבצעים","loadingProducts":"טוען מוצרים...","cart":"עגלת קניות","yourCart":"עגלת הקניות שלך","emptyCart":"העגלה ריקה","total":"סה\"כ","proceedToCheckout":"המשך לתשלום","checkout":"תשלום","customerInfo":"פרטי לקוח","fullName":"שם מלא","email":"אימייל","phone":"טלפון","shippingAddress":"כתובת למשלוח","street":"רחוב ומספר","apartment":"דירה, קומה, כניסה","city":"עיר","zip":"מיקוד","shippingMethod":"שיטת משלוח","loadingShipping":"טוען שיטות משלוח...","payment":"תשלום","loadingPayment":"טוען אפשרויות תשלום...","orderSummary":"סיכום הזמנה","subtotal":"סכום ביניים","vat":"מע\"מ","vatIncluded":"כולל מע\"מ","shipping":"משלוח","discount":"הנחה","totalToPay":"סה\"כ לתשלום","placeOrder":"בצע הזמנה","login":"התחברות","customerLogin":"התחברות לקוחות","enterEmail":"הזן את כתובת האימייל שלך ונשלח לך קוד התחברות","emailAddress":"כתובת אימייל","sendCode":"שלח קוד","enterCode":"הזן את הקוד שנשלח לאימייל שלך","verificationCode":"קוד אימות","verify":"אמת","returnPolicy":"מדיניות החזרות","addToCart":"הוסף לעגלה","addedToCart":"המוצר נוסף לעגלה!","remove":"הסר","noProducts":"אין מוצרים להצגה כרגע","errorLoading":"שגיאה בטעינה","days":"ימים","currency":"₪","free":"חינם","freeAbove":"משלוח חינם מעל","noShippingMethods":"אין אפשרויות משלוח זמינות","viewAllResults":"הצג את כל התוצאות","searchProducts":"חיפוש מוצרים","productDetails":"פרטי המוצר","viewDetails":"לפרטים נוספים","inStock":"במלאי","outOfStock":"אזל מהמלאי","sku":"מק\"ט","category":"קטגוריה","relatedProducts":"מוצרים דומים","productNotFound":"המוצר לא נמצא","backToProducts":"חזרה למוצרים","quantity":"כמות","couponCode":"קוד קופון","enterCouponCode":"הזן קוד קופון","applyCoupon":"החל","removeCoupon":"הסר","couponApplied":"הקופון הוחל בהצלחה!","invalidCoupon":"קוד קופון לא תקין","couponExpired":"הקופון פג תוקף","couponMinOrder":"סכום הזמנה מינימלי","alreadyHaveAccount":"כבר יש לך חשבון?","loginHere":"התחבר כאן","loggedInAs":"מחובר כ:","logout":"התנתק","haveCouponCode":"יש לי קוד קופון","orderSuccess":"ההזמנה התקבלה!","thankYouOrder":"תודה על ההזמנה","orderNumber":"מספר הזמנה","orderConfirmation":"אישור הזמנה נשלח לאימייל שלך","orderProcessing":"ההזמנה שלך בטיפול. נעדכן אותך כשהמשלוח יצא לדרך.","continueShopping":"להמשך קניות","orderDetails":"פרטי ההזמנה","loadingOrder":"טוען פרטי הזמנה...","orderNotFound":"לא נמצאה הזמנה","orderItems":"פריטים בהזמנה","paidAmount":"סכום ששולם","myAccount":"החשבון שלי","accountWelcome":"ברוך הבא","yourOrders":"ההזמנות שלך","noOrders":"אין עדיין הזמנות","orderDate":"תאריך","orderStatus":"סטטוס","orderTotal":"סה\"כ","viewOrder":"צפה בהזמנה","statusPending":"ממתין לתשלום","statusPaid":"שולם","statusProcessing":"בטיפול","statusShipped":"נשלח","statusDelivered":"נמסר","statusCancelled":"בוטל","notLoggedIn":"לא מחובר","pleaseLogin":"יש להתחבר כדי לצפות בחשבון","selectVariant":"בחר אפשרות","variantUnavailable":"לא זמין","color":"צבע","size":"מידה","material":"חומר","style":"סגנון","weight":"משקל","capacity":"קיבולת","length":"אורך"};
+  const t = {"products":"מוצרים","ourProducts":"המוצרים שלנו","featuredProducts":"מוצרים מומלצים","noFeaturedProducts":"עוד לא נבחרו מוצרים מומלצים. צפו בכל המוצרים שלנו!","featuredCategories":"קנו לפי קטגוריה","all":"הכל","featured":"מומלצים","new":"חדשים","sale":"מבצעים","loadingProducts":"טוען מוצרים...","cart":"עגלת קניות","yourCart":"עגלת הקניות שלך","emptyCart":"העגלה ריקה","total":"סה\"כ","proceedToCheckout":"המשך לתשלום","checkout":"תשלום","customerInfo":"פרטי לקוח","fullName":"שם מלא","email":"אימייל","phone":"טלפון","shippingAddress":"כתובת למשלוח","street":"רחוב ומספר","apartment":"דירה, קומה, כניסה","city":"עיר","zip":"מיקוד","shippingMethod":"שיטת משלוח","loadingShipping":"טוען שיטות משלוח...","payment":"תשלום","loadingPayment":"טוען אפשרויות תשלום...","orderSummary":"סיכום הזמנה","subtotal":"סכום ביניים","vat":"מע\"מ","vatIncluded":"כולל מע\"מ","shipping":"משלוח","discount":"הנחה","totalToPay":"סה\"כ לתשלום","placeOrder":"בצע הזמנה","login":"התחברות","customerLogin":"התחברות לקוחות","enterEmail":"הזן את כתובת האימייל שלך ונשלח לך קוד התחברות","emailAddress":"כתובת אימייל","sendCode":"שלח קוד","enterCode":"הזן את הקוד שנשלח לאימייל שלך","verificationCode":"קוד אימות","verify":"אמת","returnPolicy":"מדיניות החזרות","addToCart":"הוסף לעגלה","addedToCart":"המוצר נוסף לעגלה!","remove":"הסר","noProducts":"אין מוצרים להצגה כרגע","errorLoading":"שגיאה בטעינה","days":"ימים","currency":"₪","free":"חינם","freeAbove":"משלוח חינם מעל","noShippingMethods":"אין אפשרויות משלוח זמינות","viewAllResults":"הצג את כל התוצאות","searchProducts":"חיפוש מוצרים","productDetails":"פרטי המוצר","viewDetails":"לפרטים נוספים","inStock":"במלאי","outOfStock":"אזל מהמלאי","sku":"מק\"ט","category":"קטגוריה","relatedProducts":"מוצרים דומים","productNotFound":"המוצר לא נמצא","backToProducts":"חזרה למוצרים","quantity":"כמות","couponCode":"קוד קופון","enterCouponCode":"הזן קוד קופון","applyCoupon":"החל","removeCoupon":"הסר","couponApplied":"הקופון הוחל בהצלחה!","invalidCoupon":"קוד קופון לא תקין","couponExpired":"הקופון פג תוקף","couponMinOrder":"סכום הזמנה מינימלי","alreadyHaveAccount":"כבר יש לך חשבון?","loginHere":"התחבר כאן","loggedInAs":"מחובר כ:","logout":"התנתק","haveCouponCode":"יש לי קוד קופון","orderSuccess":"ההזמנה התקבלה!","thankYouOrder":"תודה על ההזמנה","orderNumber":"מספר הזמנה","orderConfirmation":"אישור הזמנה נשלח לאימייל שלך","orderProcessing":"ההזמנה שלך בטיפול. נעדכן אותך כשהמשלוח יצא לדרך.","continueShopping":"להמשך קניות","orderDetails":"פרטי ההזמנה","loadingOrder":"טוען פרטי הזמנה...","orderNotFound":"לא נמצאה הזמנה","orderItems":"פריטים בהזמנה","paidAmount":"סכום ששולם","myAccount":"החשבון שלי","accountWelcome":"ברוך הבא","yourOrders":"ההזמנות שלך","noOrders":"אין עדיין הזמנות","orderDate":"תאריך","orderStatus":"סטטוס","orderTotal":"סה\"כ","viewOrder":"צפה בהזמנה","statusPending":"ממתין לתשלום","statusPaid":"שולם","statusProcessing":"בטיפול","statusShipped":"נשלח","statusDelivered":"נמסר","statusCancelled":"בוטל","notLoggedIn":"לא מחובר","pleaseLogin":"יש להתחבר כדי לצפות בחשבון","personalDetails":"פרטים אישיים","editProfile":"עריכת פרופיל","name":"שם","saveChanges":"שמור שינויים","cancel":"ביטול","addresses":"כתובות","addAddress":"הוסף כתובת","editAddress":"ערוך כתובת","deleteAddress":"מחק כתובת","setAsDefault":"הגדר כברירת מחדל","defaultAddress":"כתובת ברירת מחדל","addressLabel":"שם הכתובת","home":"בית","work":"עבודה","other":"אחר","noAddresses":"אין כתובות שמורות","confirmDelete":"האם אתה בטוח שברצונך למחוק?","profileUpdated":"הפרופיל עודכן בהצלחה","addressSaved":"הכתובת נשמרה בהצלחה","addressDeleted":"הכתובת נמחקה","saving":"שומר...","selectVariant":"בחר אפשרות","variantUnavailable":"לא זמין","color":"צבע","size":"מידה","material":"חומר","style":"סגנון","weight":"משקל","capacity":"קיבולת","length":"אורך"};
   
   // RTL detection (based on HTML lang attribute or document direction)
   const htmlLang = document.documentElement.lang || '';
@@ -2290,10 +2290,42 @@ window.onload = function() {
     const ordersEmpty = document.getElementById('orders-empty');
     const ordersList = document.getElementById('orders-list');
     
+    // Profile elements
+    const profileDisplay = document.getElementById('profile-display');
+    const profileForm = document.getElementById('profile-form');
+    const editProfileBtn = document.getElementById('edit-profile-btn');
+    const saveProfileBtn = document.getElementById('save-profile-btn');
+    const cancelProfileBtn = document.getElementById('cancel-profile-btn');
+    const profileNameEl = document.getElementById('profile-name');
+    const profileEmailEl = document.getElementById('profile-email');
+    const profilePhoneEl = document.getElementById('profile-phone');
+    const editNameInput = document.getElementById('edit-name');
+    const editPhoneInput = document.getElementById('edit-phone');
+    
+    // Address elements
+    const addressesList = document.getElementById('addresses-list');
+    const addressesEmpty = document.getElementById('addresses-empty');
+    const addAddressBtn = document.getElementById('add-address-btn');
+    const addressModalOverlay = document.getElementById('address-modal-overlay');
+    const addressModalTitle = document.getElementById('address-modal-title');
+    const addressModalClose = document.getElementById('address-modal-close');
+    const saveAddressBtn = document.getElementById('save-address-btn');
+    const cancelAddressBtn = document.getElementById('cancel-address-btn');
+    const addressEditId = document.getElementById('address-edit-id');
+    const addressLabelSelect = document.getElementById('address-label');
+    const addressStreetInput = document.getElementById('address-street');
+    const addressApartmentInput = document.getElementById('address-apartment');
+    const addressCityInput = document.getElementById('address-city');
+    const addressZipInput = document.getElementById('address-zip');
+    const addressDefaultCheckbox = document.getElementById('address-default');
+    
     if (!notLoggedInEl || !loggedInEl) return;
     
     const token = localStorage.getItem('zappy_customer_token');
     const email = localStorage.getItem('zappy_customer_email');
+    
+    // Customer data storage
+    let customerData = { name: '', phone: '', addresses: [] };
     
     if (!token) {
       // Not logged in
@@ -2308,6 +2340,23 @@ window.onload = function() {
     
     if (accountEmailEl && email) {
       accountEmailEl.textContent = email;
+    }
+    
+    // Toast notification helper
+    function showToast(message, type) {
+      const existing = document.querySelector('.toast');
+      if (existing) existing.remove();
+      
+      const toast = document.createElement('div');
+      toast.className = 'toast ' + (type || '');
+      toast.textContent = message;
+      document.body.appendChild(toast);
+      
+      setTimeout(function() { toast.classList.add('show'); }, 10);
+      setTimeout(function() {
+        toast.classList.remove('show');
+        setTimeout(function() { toast.remove(); }, 300);
+      }, 3000);
     }
     
     // Logout handler
@@ -2326,6 +2375,368 @@ window.onload = function() {
           window.location.href = '/';
         }
       });
+    }
+    
+    // Load customer profile
+    loadCustomerProfile();
+    
+    async function loadCustomerProfile() {
+      try {
+        const res = await fetch(buildApiUrl('/api/ecommerce/customers/me'), {
+          headers: { 'Authorization': 'Bearer ' + token }
+        });
+        
+        const data = await res.json();
+        
+        if (data.success && data.data) {
+          customerData = {
+            name: data.data.name || '',
+            phone: data.data.phone || '',
+            addresses: data.data.addresses || []
+          };
+          
+          // Update profile display
+          if (profileNameEl) profileNameEl.textContent = customerData.name || '-';
+          if (profileEmailEl) profileEmailEl.textContent = data.data.email || '-';
+          if (profilePhoneEl) profilePhoneEl.textContent = customerData.phone || '-';
+          
+          // Render addresses
+          renderAddresses();
+        }
+      } catch (error) {
+        console.error('Failed to load profile:', error);
+      }
+    }
+    
+    // Profile editing
+    if (editProfileBtn) {
+      editProfileBtn.addEventListener('click', function() {
+        if (editNameInput) editNameInput.value = customerData.name || '';
+        if (editPhoneInput) editPhoneInput.value = customerData.phone || '';
+        if (profileDisplay) profileDisplay.style.display = 'none';
+        if (profileForm) profileForm.style.display = 'flex';
+        if (editProfileBtn) editProfileBtn.style.display = 'none';
+      });
+    }
+    
+    if (cancelProfileBtn) {
+      cancelProfileBtn.addEventListener('click', function() {
+        if (profileDisplay) profileDisplay.style.display = 'flex';
+        if (profileForm) profileForm.style.display = 'none';
+        if (editProfileBtn) editProfileBtn.style.display = 'inline-flex';
+      });
+    }
+    
+    if (saveProfileBtn) {
+      saveProfileBtn.addEventListener('click', async function() {
+        const newName = editNameInput ? editNameInput.value.trim() : '';
+        const newPhone = editPhoneInput ? editPhoneInput.value.trim() : '';
+        
+        saveProfileBtn.disabled = true;
+        saveProfileBtn.textContent = t.saving || 'Saving...';
+        
+        try {
+          const res = await fetch(buildApiUrl('/api/ecommerce/customers/me'), {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + token
+            },
+            body: JSON.stringify({
+              name: newName,
+              phone: newPhone
+            })
+          });
+          
+          const data = await res.json();
+          
+          if (data.success) {
+            customerData.name = newName;
+            customerData.phone = newPhone;
+            
+            if (profileNameEl) profileNameEl.textContent = newName || '-';
+            if (profilePhoneEl) profilePhoneEl.textContent = newPhone || '-';
+            
+            if (profileDisplay) profileDisplay.style.display = 'flex';
+            if (profileForm) profileForm.style.display = 'none';
+            if (editProfileBtn) editProfileBtn.style.display = 'inline-flex';
+            
+            showToast(t.profileUpdated || 'Profile updated successfully', 'success');
+          } else {
+            throw new Error(data.error || 'Failed to update profile');
+          }
+        } catch (error) {
+          console.error('Failed to save profile:', error);
+          showToast(error.message || 'Error saving profile', 'error');
+        } finally {
+          saveProfileBtn.disabled = false;
+          saveProfileBtn.textContent = t.saveChanges || 'Save Changes';
+        }
+      });
+    }
+    
+    // Address management
+    function renderAddresses() {
+      if (!addressesList) return;
+      
+      if (!customerData.addresses || customerData.addresses.length === 0) {
+        addressesList.innerHTML = '<div class="addresses-empty" id="addresses-empty"><p>' + (t.noAddresses || 'No saved addresses') + '</p></div>';
+        return;
+      }
+      
+      const labelNames = {
+        home: t.home || 'Home',
+        work: t.work || 'Work',
+        other: t.other || 'Other'
+      };
+      
+      addressesList.innerHTML = customerData.addresses.map(function(addr) {
+        const labelText = labelNames[addr.label] || addr.label || t.other || 'Other';
+        const isDefault = addr.isDefault;
+        
+        return '<div class="address-card' + (isDefault ? ' default' : '') + '" data-id="' + addr.id + '">' +
+          '<div class="address-card-header">' +
+            '<span class="address-label-tag">' + labelText + '</span>' +
+            (isDefault ? '<span class="address-default-badge">' + (t.defaultAddress || 'Default') + '</span>' : '') +
+          '</div>' +
+          '<div class="address-card-body">' +
+            '<div>' + (addr.street || '') + (addr.apartment ? ', ' + addr.apartment : '') + '</div>' +
+            '<div>' + (addr.city || '') + (addr.zip ? ' ' + addr.zip : '') + '</div>' +
+          '</div>' +
+          '<div class="address-card-actions">' +
+            '<button class="btn-icon btn-edit-address" data-id="' + addr.id + '">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>' +
+              '<span>' + (t.editAddress || 'Edit') + '</span>' +
+            '</button>' +
+            (!isDefault ? '<button class="btn-icon btn-default-address" data-id="' + addr.id + '">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>' +
+              '<span>' + (t.setAsDefault || 'Set as Default') + '</span>' +
+            '</button>' : '') +
+            '<button class="btn-icon btn-delete btn-delete-address" data-id="' + addr.id + '">' +
+              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>' +
+              '<span>' + (t.deleteAddress || 'Delete') + '</span>' +
+            '</button>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+      
+      // Attach event listeners
+      addressesList.querySelectorAll('.btn-edit-address').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const id = this.getAttribute('data-id');
+          openAddressModal(id);
+        });
+      });
+      
+      addressesList.querySelectorAll('.btn-default-address').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const id = this.getAttribute('data-id');
+          setDefaultAddress(id);
+        });
+      });
+      
+      addressesList.querySelectorAll('.btn-delete-address').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const id = this.getAttribute('data-id');
+          deleteAddress(id);
+        });
+      });
+    }
+    
+    function openAddressModal(editId) {
+      const isEdit = !!editId;
+      
+      if (addressModalTitle) {
+        addressModalTitle.textContent = isEdit ? (t.editAddress || 'Edit Address') : (t.addAddress || 'Add Address');
+      }
+      
+      // Reset form
+      if (addressEditId) addressEditId.value = editId || '';
+      if (addressLabelSelect) addressLabelSelect.value = 'home';
+      if (addressStreetInput) addressStreetInput.value = '';
+      if (addressApartmentInput) addressApartmentInput.value = '';
+      if (addressCityInput) addressCityInput.value = '';
+      if (addressZipInput) addressZipInput.value = '';
+      if (addressDefaultCheckbox) addressDefaultCheckbox.checked = false;
+      
+      // Fill form if editing
+      if (isEdit && customerData.addresses) {
+        const addr = customerData.addresses.find(function(a) { return a.id === editId; });
+        if (addr) {
+          if (addressLabelSelect) addressLabelSelect.value = addr.label || 'home';
+          if (addressStreetInput) addressStreetInput.value = addr.street || '';
+          if (addressApartmentInput) addressApartmentInput.value = addr.apartment || '';
+          if (addressCityInput) addressCityInput.value = addr.city || '';
+          if (addressZipInput) addressZipInput.value = addr.zip || '';
+          if (addressDefaultCheckbox) addressDefaultCheckbox.checked = !!addr.isDefault;
+        }
+      }
+      
+      if (addressModalOverlay) addressModalOverlay.style.display = 'flex';
+    }
+    
+    function closeAddressModal() {
+      if (addressModalOverlay) addressModalOverlay.style.display = 'none';
+    }
+    
+    // Add address button
+    if (addAddressBtn) {
+      addAddressBtn.addEventListener('click', function() {
+        openAddressModal(null);
+      });
+    }
+    
+    // Modal close buttons
+    if (addressModalClose) {
+      addressModalClose.addEventListener('click', closeAddressModal);
+    }
+    if (cancelAddressBtn) {
+      cancelAddressBtn.addEventListener('click', closeAddressModal);
+    }
+    if (addressModalOverlay) {
+      addressModalOverlay.addEventListener('click', function(e) {
+        if (e.target === addressModalOverlay) closeAddressModal();
+      });
+    }
+    
+    // Save address
+    if (saveAddressBtn) {
+      saveAddressBtn.addEventListener('click', async function() {
+        const street = addressStreetInput ? addressStreetInput.value.trim() : '';
+        const city = addressCityInput ? addressCityInput.value.trim() : '';
+        
+        if (!street || !city) {
+          showToast(isRTL ? 'נא למלא רחוב ועיר' : 'Please fill in street and city', 'error');
+          return;
+        }
+        
+        const editId = addressEditId ? addressEditId.value : '';
+        const isEdit = !!editId;
+        const isDefault = addressDefaultCheckbox ? addressDefaultCheckbox.checked : false;
+        
+        const addressData = {
+          id: isEdit ? editId : 'addr_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+          label: addressLabelSelect ? addressLabelSelect.value : 'home',
+          street: street,
+          apartment: addressApartmentInput ? addressApartmentInput.value.trim() : '',
+          city: city,
+          zip: addressZipInput ? addressZipInput.value.trim() : '',
+          isDefault: isDefault
+        };
+        
+        // Update local addresses array
+        let newAddresses = customerData.addresses ? customerData.addresses.slice() : [];
+        
+        if (isEdit) {
+          newAddresses = newAddresses.map(function(a) {
+            if (a.id === editId) return addressData;
+            return a;
+          });
+        } else {
+          newAddresses.push(addressData);
+        }
+        
+        // If setting as default, unset others
+        if (isDefault) {
+          newAddresses = newAddresses.map(function(a) {
+            if (a.id !== addressData.id) {
+              return Object.assign({}, a, { isDefault: false });
+            }
+            return a;
+          });
+        }
+        
+        saveAddressBtn.disabled = true;
+        saveAddressBtn.textContent = t.saving || 'Saving...';
+        
+        try {
+          const res = await fetch(buildApiUrl('/api/ecommerce/customers/me'), {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer ' + token
+            },
+            body: JSON.stringify({ addresses: newAddresses })
+          });
+          
+          const data = await res.json();
+          
+          if (data.success) {
+            customerData.addresses = newAddresses;
+            renderAddresses();
+            closeAddressModal();
+            showToast(t.addressSaved || 'Address saved successfully', 'success');
+          } else {
+            throw new Error(data.error || 'Failed to save address');
+          }
+        } catch (error) {
+          console.error('Failed to save address:', error);
+          showToast(error.message || 'Error saving address', 'error');
+        } finally {
+          saveAddressBtn.disabled = false;
+          saveAddressBtn.textContent = t.saveChanges || 'Save Changes';
+        }
+      });
+    }
+    
+    async function setDefaultAddress(id) {
+      const newAddresses = customerData.addresses.map(function(a) {
+        return Object.assign({}, a, { isDefault: a.id === id });
+      });
+      
+      try {
+        const res = await fetch(buildApiUrl('/api/ecommerce/customers/me'), {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+          },
+          body: JSON.stringify({ addresses: newAddresses })
+        });
+        
+        const data = await res.json();
+        
+        if (data.success) {
+          customerData.addresses = newAddresses;
+          renderAddresses();
+          showToast(t.addressSaved || 'Default address updated', 'success');
+        }
+      } catch (error) {
+        console.error('Failed to set default address:', error);
+        showToast('Error updating default address', 'error');
+      }
+    }
+    
+    async function deleteAddress(id) {
+      if (!confirm(t.confirmDelete || 'Are you sure you want to delete this address?')) {
+        return;
+      }
+      
+      const newAddresses = customerData.addresses.filter(function(a) {
+        return a.id !== id;
+      });
+      
+      try {
+        const res = await fetch(buildApiUrl('/api/ecommerce/customers/me'), {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token
+          },
+          body: JSON.stringify({ addresses: newAddresses })
+        });
+        
+        const data = await res.json();
+        
+        if (data.success) {
+          customerData.addresses = newAddresses;
+          renderAddresses();
+          showToast(t.addressDeleted || 'Address deleted', 'success');
+        }
+      } catch (error) {
+        console.error('Failed to delete address:', error);
+        showToast('Error deleting address', 'error');
+      }
     }
     
     // Load orders
@@ -2557,7 +2968,7 @@ async function loadFeaturedProducts() {
   const websiteId = window.ZAPPY_WEBSITE_ID;
   if (!websiteId) return;
   
-  const t = {"products":"מוצרים","ourProducts":"המוצרים שלנו","featuredProducts":"מוצרים מומלצים","noFeaturedProducts":"עוד לא נבחרו מוצרים מומלצים. צפו בכל המוצרים שלנו!","featuredCategories":"קנו לפי קטגוריה","all":"הכל","featured":"מומלצים","new":"חדשים","sale":"מבצעים","loadingProducts":"טוען מוצרים...","cart":"עגלת קניות","yourCart":"עגלת הקניות שלך","emptyCart":"העגלה ריקה","total":"סה\"כ","proceedToCheckout":"המשך לתשלום","checkout":"תשלום","customerInfo":"פרטי לקוח","fullName":"שם מלא","email":"אימייל","phone":"טלפון","shippingAddress":"כתובת למשלוח","street":"רחוב ומספר","apartment":"דירה, קומה, כניסה","city":"עיר","zip":"מיקוד","shippingMethod":"שיטת משלוח","loadingShipping":"טוען שיטות משלוח...","payment":"תשלום","loadingPayment":"טוען אפשרויות תשלום...","orderSummary":"סיכום הזמנה","subtotal":"סכום ביניים","vat":"מע\"מ","vatIncluded":"כולל מע\"מ","shipping":"משלוח","discount":"הנחה","totalToPay":"סה\"כ לתשלום","placeOrder":"בצע הזמנה","login":"התחברות","customerLogin":"התחברות לקוחות","enterEmail":"הזן את כתובת האימייל שלך ונשלח לך קוד התחברות","emailAddress":"כתובת אימייל","sendCode":"שלח קוד","enterCode":"הזן את הקוד שנשלח לאימייל שלך","verificationCode":"קוד אימות","verify":"אמת","returnPolicy":"מדיניות החזרות","addToCart":"הוסף לעגלה","addedToCart":"המוצר נוסף לעגלה!","remove":"הסר","noProducts":"אין מוצרים להצגה כרגע","errorLoading":"שגיאה בטעינה","days":"ימים","currency":"₪","free":"חינם","freeAbove":"משלוח חינם מעל","noShippingMethods":"אין אפשרויות משלוח זמינות","viewAllResults":"הצג את כל התוצאות","searchProducts":"חיפוש מוצרים","productDetails":"פרטי המוצר","viewDetails":"לפרטים נוספים","inStock":"במלאי","outOfStock":"אזל מהמלאי","sku":"מק\"ט","category":"קטגוריה","relatedProducts":"מוצרים דומים","productNotFound":"המוצר לא נמצא","backToProducts":"חזרה למוצרים","quantity":"כמות","couponCode":"קוד קופון","enterCouponCode":"הזן קוד קופון","applyCoupon":"החל","removeCoupon":"הסר","couponApplied":"הקופון הוחל בהצלחה!","invalidCoupon":"קוד קופון לא תקין","couponExpired":"הקופון פג תוקף","couponMinOrder":"סכום הזמנה מינימלי","alreadyHaveAccount":"כבר יש לך חשבון?","loginHere":"התחבר כאן","loggedInAs":"מחובר כ:","logout":"התנתק","haveCouponCode":"יש לי קוד קופון","orderSuccess":"ההזמנה התקבלה!","thankYouOrder":"תודה על ההזמנה","orderNumber":"מספר הזמנה","orderConfirmation":"אישור הזמנה נשלח לאימייל שלך","orderProcessing":"ההזמנה שלך בטיפול. נעדכן אותך כשהמשלוח יצא לדרך.","continueShopping":"להמשך קניות","orderDetails":"פרטי ההזמנה","loadingOrder":"טוען פרטי הזמנה...","orderNotFound":"לא נמצאה הזמנה","orderItems":"פריטים בהזמנה","paidAmount":"סכום ששולם","myAccount":"החשבון שלי","accountWelcome":"ברוך הבא","yourOrders":"ההזמנות שלך","noOrders":"אין עדיין הזמנות","orderDate":"תאריך","orderStatus":"סטטוס","orderTotal":"סה\"כ","viewOrder":"צפה בהזמנה","statusPending":"ממתין לתשלום","statusPaid":"שולם","statusProcessing":"בטיפול","statusShipped":"נשלח","statusDelivered":"נמסר","statusCancelled":"בוטל","notLoggedIn":"לא מחובר","pleaseLogin":"יש להתחבר כדי לצפות בחשבון","selectVariant":"בחר אפשרות","variantUnavailable":"לא זמין","color":"צבע","size":"מידה","material":"חומר","style":"סגנון","weight":"משקל","capacity":"קיבולת","length":"אורך"};
+  const t = {"products":"מוצרים","ourProducts":"המוצרים שלנו","featuredProducts":"מוצרים מומלצים","noFeaturedProducts":"עוד לא נבחרו מוצרים מומלצים. צפו בכל המוצרים שלנו!","featuredCategories":"קנו לפי קטגוריה","all":"הכל","featured":"מומלצים","new":"חדשים","sale":"מבצעים","loadingProducts":"טוען מוצרים...","cart":"עגלת קניות","yourCart":"עגלת הקניות שלך","emptyCart":"העגלה ריקה","total":"סה\"כ","proceedToCheckout":"המשך לתשלום","checkout":"תשלום","customerInfo":"פרטי לקוח","fullName":"שם מלא","email":"אימייל","phone":"טלפון","shippingAddress":"כתובת למשלוח","street":"רחוב ומספר","apartment":"דירה, קומה, כניסה","city":"עיר","zip":"מיקוד","shippingMethod":"שיטת משלוח","loadingShipping":"טוען שיטות משלוח...","payment":"תשלום","loadingPayment":"טוען אפשרויות תשלום...","orderSummary":"סיכום הזמנה","subtotal":"סכום ביניים","vat":"מע\"מ","vatIncluded":"כולל מע\"מ","shipping":"משלוח","discount":"הנחה","totalToPay":"סה\"כ לתשלום","placeOrder":"בצע הזמנה","login":"התחברות","customerLogin":"התחברות לקוחות","enterEmail":"הזן את כתובת האימייל שלך ונשלח לך קוד התחברות","emailAddress":"כתובת אימייל","sendCode":"שלח קוד","enterCode":"הזן את הקוד שנשלח לאימייל שלך","verificationCode":"קוד אימות","verify":"אמת","returnPolicy":"מדיניות החזרות","addToCart":"הוסף לעגלה","addedToCart":"המוצר נוסף לעגלה!","remove":"הסר","noProducts":"אין מוצרים להצגה כרגע","errorLoading":"שגיאה בטעינה","days":"ימים","currency":"₪","free":"חינם","freeAbove":"משלוח חינם מעל","noShippingMethods":"אין אפשרויות משלוח זמינות","viewAllResults":"הצג את כל התוצאות","searchProducts":"חיפוש מוצרים","productDetails":"פרטי המוצר","viewDetails":"לפרטים נוספים","inStock":"במלאי","outOfStock":"אזל מהמלאי","sku":"מק\"ט","category":"קטגוריה","relatedProducts":"מוצרים דומים","productNotFound":"המוצר לא נמצא","backToProducts":"חזרה למוצרים","quantity":"כמות","couponCode":"קוד קופון","enterCouponCode":"הזן קוד קופון","applyCoupon":"החל","removeCoupon":"הסר","couponApplied":"הקופון הוחל בהצלחה!","invalidCoupon":"קוד קופון לא תקין","couponExpired":"הקופון פג תוקף","couponMinOrder":"סכום הזמנה מינימלי","alreadyHaveAccount":"כבר יש לך חשבון?","loginHere":"התחבר כאן","loggedInAs":"מחובר כ:","logout":"התנתק","haveCouponCode":"יש לי קוד קופון","orderSuccess":"ההזמנה התקבלה!","thankYouOrder":"תודה על ההזמנה","orderNumber":"מספר הזמנה","orderConfirmation":"אישור הזמנה נשלח לאימייל שלך","orderProcessing":"ההזמנה שלך בטיפול. נעדכן אותך כשהמשלוח יצא לדרך.","continueShopping":"להמשך קניות","orderDetails":"פרטי ההזמנה","loadingOrder":"טוען פרטי הזמנה...","orderNotFound":"לא נמצאה הזמנה","orderItems":"פריטים בהזמנה","paidAmount":"סכום ששולם","myAccount":"החשבון שלי","accountWelcome":"ברוך הבא","yourOrders":"ההזמנות שלך","noOrders":"אין עדיין הזמנות","orderDate":"תאריך","orderStatus":"סטטוס","orderTotal":"סה\"כ","viewOrder":"צפה בהזמנה","statusPending":"ממתין לתשלום","statusPaid":"שולם","statusProcessing":"בטיפול","statusShipped":"נשלח","statusDelivered":"נמסר","statusCancelled":"בוטל","notLoggedIn":"לא מחובר","pleaseLogin":"יש להתחבר כדי לצפות בחשבון","personalDetails":"פרטים אישיים","editProfile":"עריכת פרופיל","name":"שם","saveChanges":"שמור שינויים","cancel":"ביטול","addresses":"כתובות","addAddress":"הוסף כתובת","editAddress":"ערוך כתובת","deleteAddress":"מחק כתובת","setAsDefault":"הגדר כברירת מחדל","defaultAddress":"כתובת ברירת מחדל","addressLabel":"שם הכתובת","home":"בית","work":"עבודה","other":"אחר","noAddresses":"אין כתובות שמורות","confirmDelete":"האם אתה בטוח שברצונך למחוק?","profileUpdated":"הפרופיל עודכן בהצלחה","addressSaved":"הכתובת נשמרה בהצלחה","addressDeleted":"הכתובת נמחקה","saving":"שומר...","selectVariant":"בחר אפשרות","variantUnavailable":"לא זמין","color":"צבע","size":"מידה","material":"חומר","style":"סגנון","weight":"משקל","capacity":"קיבולת","length":"אורך"};
   
   try {
     // Only fetch featured products - no fallback
@@ -2708,7 +3119,7 @@ async function loadProductDetailPage() {
   const websiteId = window.ZAPPY_WEBSITE_ID;
   if (!websiteId) return;
   
-  const t = {"products":"מוצרים","ourProducts":"המוצרים שלנו","featuredProducts":"מוצרים מומלצים","noFeaturedProducts":"עוד לא נבחרו מוצרים מומלצים. צפו בכל המוצרים שלנו!","featuredCategories":"קנו לפי קטגוריה","all":"הכל","featured":"מומלצים","new":"חדשים","sale":"מבצעים","loadingProducts":"טוען מוצרים...","cart":"עגלת קניות","yourCart":"עגלת הקניות שלך","emptyCart":"העגלה ריקה","total":"סה\"כ","proceedToCheckout":"המשך לתשלום","checkout":"תשלום","customerInfo":"פרטי לקוח","fullName":"שם מלא","email":"אימייל","phone":"טלפון","shippingAddress":"כתובת למשלוח","street":"רחוב ומספר","apartment":"דירה, קומה, כניסה","city":"עיר","zip":"מיקוד","shippingMethod":"שיטת משלוח","loadingShipping":"טוען שיטות משלוח...","payment":"תשלום","loadingPayment":"טוען אפשרויות תשלום...","orderSummary":"סיכום הזמנה","subtotal":"סכום ביניים","vat":"מע\"מ","vatIncluded":"כולל מע\"מ","shipping":"משלוח","discount":"הנחה","totalToPay":"סה\"כ לתשלום","placeOrder":"בצע הזמנה","login":"התחברות","customerLogin":"התחברות לקוחות","enterEmail":"הזן את כתובת האימייל שלך ונשלח לך קוד התחברות","emailAddress":"כתובת אימייל","sendCode":"שלח קוד","enterCode":"הזן את הקוד שנשלח לאימייל שלך","verificationCode":"קוד אימות","verify":"אמת","returnPolicy":"מדיניות החזרות","addToCart":"הוסף לעגלה","addedToCart":"המוצר נוסף לעגלה!","remove":"הסר","noProducts":"אין מוצרים להצגה כרגע","errorLoading":"שגיאה בטעינה","days":"ימים","currency":"₪","free":"חינם","freeAbove":"משלוח חינם מעל","noShippingMethods":"אין אפשרויות משלוח זמינות","viewAllResults":"הצג את כל התוצאות","searchProducts":"חיפוש מוצרים","productDetails":"פרטי המוצר","viewDetails":"לפרטים נוספים","inStock":"במלאי","outOfStock":"אזל מהמלאי","sku":"מק\"ט","category":"קטגוריה","relatedProducts":"מוצרים דומים","productNotFound":"המוצר לא נמצא","backToProducts":"חזרה למוצרים","quantity":"כמות","couponCode":"קוד קופון","enterCouponCode":"הזן קוד קופון","applyCoupon":"החל","removeCoupon":"הסר","couponApplied":"הקופון הוחל בהצלחה!","invalidCoupon":"קוד קופון לא תקין","couponExpired":"הקופון פג תוקף","couponMinOrder":"סכום הזמנה מינימלי","alreadyHaveAccount":"כבר יש לך חשבון?","loginHere":"התחבר כאן","loggedInAs":"מחובר כ:","logout":"התנתק","haveCouponCode":"יש לי קוד קופון","orderSuccess":"ההזמנה התקבלה!","thankYouOrder":"תודה על ההזמנה","orderNumber":"מספר הזמנה","orderConfirmation":"אישור הזמנה נשלח לאימייל שלך","orderProcessing":"ההזמנה שלך בטיפול. נעדכן אותך כשהמשלוח יצא לדרך.","continueShopping":"להמשך קניות","orderDetails":"פרטי ההזמנה","loadingOrder":"טוען פרטי הזמנה...","orderNotFound":"לא נמצאה הזמנה","orderItems":"פריטים בהזמנה","paidAmount":"סכום ששולם","myAccount":"החשבון שלי","accountWelcome":"ברוך הבא","yourOrders":"ההזמנות שלך","noOrders":"אין עדיין הזמנות","orderDate":"תאריך","orderStatus":"סטטוס","orderTotal":"סה\"כ","viewOrder":"צפה בהזמנה","statusPending":"ממתין לתשלום","statusPaid":"שולם","statusProcessing":"בטיפול","statusShipped":"נשלח","statusDelivered":"נמסר","statusCancelled":"בוטל","notLoggedIn":"לא מחובר","pleaseLogin":"יש להתחבר כדי לצפות בחשבון","selectVariant":"בחר אפשרות","variantUnavailable":"לא זמין","color":"צבע","size":"מידה","material":"חומר","style":"סגנון","weight":"משקל","capacity":"קיבולת","length":"אורך"};
+  const t = {"products":"מוצרים","ourProducts":"המוצרים שלנו","featuredProducts":"מוצרים מומלצים","noFeaturedProducts":"עוד לא נבחרו מוצרים מומלצים. צפו בכל המוצרים שלנו!","featuredCategories":"קנו לפי קטגוריה","all":"הכל","featured":"מומלצים","new":"חדשים","sale":"מבצעים","loadingProducts":"טוען מוצרים...","cart":"עגלת קניות","yourCart":"עגלת הקניות שלך","emptyCart":"העגלה ריקה","total":"סה\"כ","proceedToCheckout":"המשך לתשלום","checkout":"תשלום","customerInfo":"פרטי לקוח","fullName":"שם מלא","email":"אימייל","phone":"טלפון","shippingAddress":"כתובת למשלוח","street":"רחוב ומספר","apartment":"דירה, קומה, כניסה","city":"עיר","zip":"מיקוד","shippingMethod":"שיטת משלוח","loadingShipping":"טוען שיטות משלוח...","payment":"תשלום","loadingPayment":"טוען אפשרויות תשלום...","orderSummary":"סיכום הזמנה","subtotal":"סכום ביניים","vat":"מע\"מ","vatIncluded":"כולל מע\"מ","shipping":"משלוח","discount":"הנחה","totalToPay":"סה\"כ לתשלום","placeOrder":"בצע הזמנה","login":"התחברות","customerLogin":"התחברות לקוחות","enterEmail":"הזן את כתובת האימייל שלך ונשלח לך קוד התחברות","emailAddress":"כתובת אימייל","sendCode":"שלח קוד","enterCode":"הזן את הקוד שנשלח לאימייל שלך","verificationCode":"קוד אימות","verify":"אמת","returnPolicy":"מדיניות החזרות","addToCart":"הוסף לעגלה","addedToCart":"המוצר נוסף לעגלה!","remove":"הסר","noProducts":"אין מוצרים להצגה כרגע","errorLoading":"שגיאה בטעינה","days":"ימים","currency":"₪","free":"חינם","freeAbove":"משלוח חינם מעל","noShippingMethods":"אין אפשרויות משלוח זמינות","viewAllResults":"הצג את כל התוצאות","searchProducts":"חיפוש מוצרים","productDetails":"פרטי המוצר","viewDetails":"לפרטים נוספים","inStock":"במלאי","outOfStock":"אזל מהמלאי","sku":"מק\"ט","category":"קטגוריה","relatedProducts":"מוצרים דומים","productNotFound":"המוצר לא נמצא","backToProducts":"חזרה למוצרים","quantity":"כמות","couponCode":"קוד קופון","enterCouponCode":"הזן קוד קופון","applyCoupon":"החל","removeCoupon":"הסר","couponApplied":"הקופון הוחל בהצלחה!","invalidCoupon":"קוד קופון לא תקין","couponExpired":"הקופון פג תוקף","couponMinOrder":"סכום הזמנה מינימלי","alreadyHaveAccount":"כבר יש לך חשבון?","loginHere":"התחבר כאן","loggedInAs":"מחובר כ:","logout":"התנתק","haveCouponCode":"יש לי קוד קופון","orderSuccess":"ההזמנה התקבלה!","thankYouOrder":"תודה על ההזמנה","orderNumber":"מספר הזמנה","orderConfirmation":"אישור הזמנה נשלח לאימייל שלך","orderProcessing":"ההזמנה שלך בטיפול. נעדכן אותך כשהמשלוח יצא לדרך.","continueShopping":"להמשך קניות","orderDetails":"פרטי ההזמנה","loadingOrder":"טוען פרטי הזמנה...","orderNotFound":"לא נמצאה הזמנה","orderItems":"פריטים בהזמנה","paidAmount":"סכום ששולם","myAccount":"החשבון שלי","accountWelcome":"ברוך הבא","yourOrders":"ההזמנות שלך","noOrders":"אין עדיין הזמנות","orderDate":"תאריך","orderStatus":"סטטוס","orderTotal":"סה\"כ","viewOrder":"צפה בהזמנה","statusPending":"ממתין לתשלום","statusPaid":"שולם","statusProcessing":"בטיפול","statusShipped":"נשלח","statusDelivered":"נמסר","statusCancelled":"בוטל","notLoggedIn":"לא מחובר","pleaseLogin":"יש להתחבר כדי לצפות בחשבון","personalDetails":"פרטים אישיים","editProfile":"עריכת פרופיל","name":"שם","saveChanges":"שמור שינויים","cancel":"ביטול","addresses":"כתובות","addAddress":"הוסף כתובת","editAddress":"ערוך כתובת","deleteAddress":"מחק כתובת","setAsDefault":"הגדר כברירת מחדל","defaultAddress":"כתובת ברירת מחדל","addressLabel":"שם הכתובת","home":"בית","work":"עבודה","other":"אחר","noAddresses":"אין כתובות שמורות","confirmDelete":"האם אתה בטוח שברצונך למחוק?","profileUpdated":"הפרופיל עודכן בהצלחה","addressSaved":"הכתובת נשמרה בהצלחה","addressDeleted":"הכתובת נמחקה","saving":"שומר...","selectVariant":"בחר אפשרות","variantUnavailable":"לא זמין","color":"צבע","size":"מידה","material":"חומר","style":"סגנון","weight":"משקל","capacity":"קיבולת","length":"אורך"};
   
   // Get slug from URL - check both pathname and query parameter (preview mode)
   let pagePath = window.location.pathname;

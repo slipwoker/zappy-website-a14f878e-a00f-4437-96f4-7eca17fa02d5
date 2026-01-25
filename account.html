@@ -74,6 +74,41 @@
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* Announcement Bar Styles */
+.zappy-announcement-bar {
+  background-color: #000000;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  box-sizing: border-box;
+  z-index: 1001;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.zappy-announcement-bar .zappy-announcement-message {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.zappy-announcement-bar .zappy-announcement-message.active {
+  opacity: 1;
+}</style>
 <!-- Zappy Analytics -->
 <script>
 (function() {
@@ -321,6 +356,7 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+<div class="zappy-announcement-bar"><span class="zappy-announcement-message active">הנחה 20% לתחילת השנה - קוד קופון NEW2026</span><span class="zappy-announcement-message">משלוח חינם מעל 300 ש״ח הזמנה</span></div>
   <script>window.ZAPPY_WEBSITE_ID = "a14f878e-a00f-4437-96f4-7eca17fa02d5";window.ZAPPY_API_BASE = "http://localhost:5001";</script>
   
     <div class="mobile-search-panel" id="mobile-search-panel">
@@ -417,6 +453,61 @@
                 </div>
               </div>
               
+              <!-- Personal Details Section -->
+              <div class="profile-section">
+                <div class="section-header">
+                  <h2>פרטים אישיים</h2>
+                  <button class="btn btn-text btn-sm" id="edit-profile-btn">עריכת פרופיל</button>
+                </div>
+                
+                <!-- Profile Display -->
+                <div class="profile-display" id="profile-display">
+                  <div class="profile-field">
+                    <span class="profile-label">שם:</span>
+                    <span class="profile-value" id="profile-name">-</span>
+                  </div>
+                  <div class="profile-field">
+                    <span class="profile-label">אימייל:</span>
+                    <span class="profile-value" id="profile-email">-</span>
+                  </div>
+                  <div class="profile-field">
+                    <span class="profile-label">טלפון:</span>
+                    <span class="profile-value" id="profile-phone">-</span>
+                  </div>
+                </div>
+                
+                <!-- Profile Edit Form (hidden by default) -->
+                <div class="profile-form" id="profile-form" style="display: none;">
+                  <div class="form-group">
+                    <label for="edit-name">שם</label>
+                    <input type="text" id="edit-name" placeholder="שם">
+                  </div>
+                  <div class="form-group">
+                    <label for="edit-phone">טלפון</label>
+                    <input type="tel" id="edit-phone" placeholder="טלפון">
+                  </div>
+                  <div class="form-actions">
+                    <button class="btn btn-primary btn-sm" id="save-profile-btn">שמור שינויים</button>
+                    <button class="btn btn-secondary btn-sm" id="cancel-profile-btn">ביטול</button>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Addresses Section -->
+              <div class="addresses-section">
+                <div class="section-header">
+                  <h2>כתובות</h2>
+                  <button class="btn btn-primary btn-sm" id="add-address-btn">הוסף כתובת</button>
+                </div>
+                
+                <div class="addresses-list" id="addresses-list">
+                  <div class="addresses-empty" id="addresses-empty">
+                    <p>אין כתובות שמורות</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Orders Section -->
               <div class="orders-section">
                 <h2>ההזמנות שלך</h2>
                 <div class="orders-loading" id="orders-loading">
@@ -432,6 +523,53 @@
             </div>
           </div>
         </section>
+        
+        <!-- Address Modal -->
+        <div class="address-modal-overlay" id="address-modal-overlay" style="display: none;">
+          <div class="address-modal">
+            <div class="address-modal-header">
+              <h3 id="address-modal-title">הוסף כתובת</h3>
+              <button class="address-modal-close" id="address-modal-close">&times;</button>
+            </div>
+            <div class="address-modal-body">
+              <input type="hidden" id="address-edit-id">
+              <div class="form-group">
+                <label for="address-label">שם הכתובת</label>
+                <select id="address-label">
+                  <option value="home">בית</option>
+                  <option value="work">עבודה</option>
+                  <option value="other">אחר</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="address-street">רחוב ומספר</label>
+                <input type="text" id="address-street" placeholder="רחוב ומספר" required>
+              </div>
+              <div class="form-group">
+                <label for="address-apartment">דירה, קומה, כניסה</label>
+                <input type="text" id="address-apartment" placeholder="דירה, קומה, כניסה">
+              </div>
+              <div class="form-group">
+                <label for="address-city">עיר</label>
+                <input type="text" id="address-city" placeholder="עיר" required>
+              </div>
+              <div class="form-group">
+                <label for="address-zip">מיקוד</label>
+                <input type="text" id="address-zip" placeholder="מיקוד">
+              </div>
+              <div class="form-group form-checkbox">
+                <label>
+                  <input type="checkbox" id="address-default">
+                  <span>הגדר כברירת מחדל</span>
+                </label>
+              </div>
+            </div>
+            <div class="address-modal-footer">
+              <button class="btn btn-primary" id="save-address-btn">שמור שינויים</button>
+              <button class="btn btn-secondary" id="cancel-address-btn">ביטול</button>
+            </div>
+          </div>
+        </div>
       
   </main>
   <footer class="legal-footer">
@@ -485,6 +623,19 @@
     <a href="/checkout" class="cart-drawer-checkout">המשך לתשלום</a>
   </div>
 </aside>
+
+<script>
+(function() {
+  var messages = document.querySelectorAll('.zappy-announcement-message');
+  if (messages.length <= 1) return;
+  var current = 0;
+  setInterval(function() {
+    messages[current].classList.remove('active');
+    current = (current + 1) % messages.length;
+    messages[current].classList.add('active');
+  }, 3000);
+})();
+</script>
 
     <script id="zappy-mobile-submenu-script">
     (function() {

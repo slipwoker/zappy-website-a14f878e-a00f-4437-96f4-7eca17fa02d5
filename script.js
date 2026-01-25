@@ -2297,7 +2297,6 @@ window.onload = function() {
     const saveProfileBtn = document.getElementById('save-profile-btn');
     const cancelProfileBtn = document.getElementById('cancel-profile-btn');
     const profileNameEl = document.getElementById('profile-name');
-    const profileEmailEl = document.getElementById('profile-email');
     const profilePhoneEl = document.getElementById('profile-phone');
     const editNameInput = document.getElementById('edit-name');
     const editPhoneInput = document.getElementById('edit-phone');
@@ -2395,10 +2394,14 @@ window.onload = function() {
             addresses: data.data.addresses || []
           };
           
-          // Update profile display
-          if (profileNameEl) profileNameEl.textContent = customerData.name || '-';
-          if (profileEmailEl) profileEmailEl.textContent = data.data.email || '-';
+          // Update profile display - fall back to email if name is not set
+          if (profileNameEl) profileNameEl.textContent = customerData.name || data.data.email || '-';
           if (profilePhoneEl) profilePhoneEl.textContent = customerData.phone || '-';
+          
+          // Update welcome message - show name if available, otherwise email
+          if (accountEmailEl) {
+            accountEmailEl.textContent = customerData.name || data.data.email || '';
+          }
           
           // Render addresses
           renderAddresses();

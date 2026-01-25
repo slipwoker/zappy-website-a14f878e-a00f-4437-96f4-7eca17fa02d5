@@ -1,6 +1,4 @@
-# חלומות מתוקים — Generative Engine Optimization Map
-
-> A ייצור ומכירת מזרנים business.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -46,6 +44,10 @@ https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/order-success
 https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/product/:slug
 פרטי המוצר - חלומות מתוקים
 
+### Category
+https://zappy-site-a14f878e-a00f-4437-96f4.onrender.com/category/:slug
+מוצרים - חלומות מתוקים
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -64,15 +66,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About חלומות מתוקים
-חלומות מתוקים is a business in the ייצור ומכירת מזרנים industry.
-
-## Target Audience
-קהל רחב
-
-## Industry
-ייצור ומכירת מזרנים
-
+## About Business
 ---
 
 # Additional Resources
